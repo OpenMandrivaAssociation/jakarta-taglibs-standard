@@ -6,7 +6,7 @@
 
 Name:           jakarta-%{short_name}
 Version:        1.1.2
-Release:        %mkrel 4
+Release:        %mkrel 5
 Epoch:          0
 Summary:        An open-source implementation of the JSP Standard Tag Library
 License:        Apache License
@@ -18,8 +18,6 @@ Source:         http://www.apache.org/dist/jakarta/taglibs/standard/source/jakar
 Patch0:		jakarta-taglibs-standard-%{version}-build.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %{gcj_support}
-Requires(post):	java-gcj-compat
-Requires(postun): java-gcj-compat
 BuildRequires:	java-gcj-compat
 %else
 BuildArch:      noarch
