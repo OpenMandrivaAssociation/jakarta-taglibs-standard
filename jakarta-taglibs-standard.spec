@@ -6,7 +6,7 @@
 
 Name:           jakarta-%{short_name}
 Version:        1.1.2
-Release:        %mkrel 5
+Release:        %mkrel 6
 Epoch:          0
 Summary:        An open-source implementation of the JSP Standard Tag Library
 License:        Apache License
@@ -92,10 +92,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %if %{gcj_support}
 %post
-%{_bindir}/rebuild-gcj-db
+%{update_gcjdb}
 
 %postun
-%{_bindir}/rebuild-gcj-db
+%{clean_gcjdb}
 %endif
 
 %post javadoc
