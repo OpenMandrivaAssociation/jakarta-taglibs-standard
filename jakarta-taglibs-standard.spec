@@ -6,7 +6,7 @@
 
 Name:           jakarta-%{short_name}
 Version:        1.1.2
-Release:        %mkrel 6
+Release:        %mkrel 7
 Epoch:          0
 Summary:        An open-source implementation of the JSP Standard Tag Library
 License:        Apache License
@@ -23,7 +23,7 @@ BuildRequires:	java-gcj-compat
 BuildArch:      noarch
 %endif
 BuildRequires:  ant
-BuildRequires:  jpackage-utils >= 0:1.5.30
+BuildRequires:  java-rpmbuild >= 0:1.5.30
 BuildRequires:  jsp
 BuildRequires:  servletapi5 >= 0:5.0.16
 BuildRequires:  xalan-j2
