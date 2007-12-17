@@ -16,7 +16,6 @@ Group:          Development/Java
 URL:            http://jakarta.apache.org/taglibs/
 Source:         http://www.apache.org/dist/jakarta/taglibs/standard/source/jakarta-taglibs-standard-%{jversion}-src.tar.bz2
 Patch0:		jakarta-taglibs-standard-%{version}-build.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %{gcj_support}
 BuildRequires:	java-gcj-compat
 %else
