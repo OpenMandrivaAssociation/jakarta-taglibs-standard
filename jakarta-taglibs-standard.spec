@@ -11,6 +11,7 @@ Epoch:          0
 Summary:        An open-source implementation of the JSP Standard Tag Library
 License:        Apache License
 Group:          Development/Java
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 #Vendor:         JPackage Project
 #Distribution:   JPackage
 URL:            http://jakarta.apache.org/taglibs/
