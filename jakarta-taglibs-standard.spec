@@ -25,7 +25,7 @@ BuildRequires:	jpackage-utils >= 0:1.5.30
 BuildRequires:	tomcat-servlet-3.0-api
 BuildRequires:	tomcat-jsp-2.2-api
 BuildRequires:	xalan-j2 >= 2.6.0
-Requires:	servletapi5
+Requires:	tomcat-servlet-3.0-api
 Requires:	tomcat-jsp-2.2-api
 Requires:	xalan-j2 >= 2.6.0
 
@@ -50,8 +50,8 @@ Javadoc for %{name}.
 cat > build.properties <<EOBP
 build.dir=build
 dist.dir=dist
-servlet24.jar=$(build-classpath tomcat-servlet-3.0-spi)
-jsp20.jar=$(build-classpath jsp)
+servlet24.jar=$(build-classpath tomcat-servlet-3.0-api)
+jsp20.jar=$(build-classpath tomcat-jsp-2.2-api)
 jaxp-api.jar=$(build-classpath xalan-j2)
 EOBP
 
