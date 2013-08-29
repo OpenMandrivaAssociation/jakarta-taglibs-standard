@@ -47,6 +47,9 @@ Javadoc for %{name}.
 %patch0 -p0 -b .origA
 %patch1 -p0
 %patch2 -p1
+#
+rm -fr standard/src/org/apache/taglibs/standard/lang/jstl/test/PageContextImpl.java
+rm -fr standard/src/org/apache/taglibs/standard/lang/jstl/test/EvaluationTest.java
 cat > build.properties <<EOBP
 build.dir=build
 dist.dir=dist
