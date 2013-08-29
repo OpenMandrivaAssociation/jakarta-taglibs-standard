@@ -50,8 +50,8 @@ Javadoc for %{name}.
 cat > build.properties <<EOBP
 build.dir=build
 dist.dir=dist
-servlet24.jar=$(build-classpath servletapi5)
-jsp20.jar=$(build-classpath jspapi)
+servlet24.jar=$(build-classpath tomcat-servlet-3.0-spi)
+jsp20.jar=$(build-classpath jsp)
 jaxp-api.jar=$(build-classpath xalan-j2)
 EOBP
 
