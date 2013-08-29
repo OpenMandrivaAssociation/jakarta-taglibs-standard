@@ -34,28 +34,3 @@
      <!-- Copy web.xml + examples TLD -->
      <copy todir="${build.examples}/WEB-INF">
 
---- standard/examples/src/org/apache/taglibs/standard/examples/beans/Address.java~	2004-07-19 23:06:08.000000000 +0200
-+++ standard/examples/src/org/apache/taglibs/standard/examples/beans/Address.java	2011-02-03 02:45:04.599061696 +0100
-@@ -1,4 +1,4 @@
--/*
-+/**
-  * Copyright 1999-2004 The Apache Software Foundation.
-  * 
-  * Licensed under the Apache License, Version 2.0 (the "License");
-}
-Index: standard/src/org/apache/taglibs/standard/tag/common/sql/DataSourceWrapper.java
-===================================================================
---- standard/src/org/apache/taglibs/standard/tag/common/sql/DataSourceWrapper.java
-+++ standard/src/org/apache/taglibs/standard/tag/common/sql/DataSourceWrapper.java	2011-03-10 23:10:13.741427798 +0100
-@@ -111,5 +111,11 @@
-         throw new SQLException(Resources.getMessage("NOT_SUPPORTED"));
-     }
- 
-+    public synchronized boolean isWrapperFor(Class c) throws SQLException {
-+        throw new SQLException(Resources.getMessage("NOT_SUPPORTED"));
-+    }
- 
-+    public synchronized Object unwrap(Class c) throws SQLException {
-+        throw new SQLException(Resources.getMessage("NOT_SUPPORTED"));
-+    }			
- }

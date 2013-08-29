@@ -5,28 +5,28 @@
 Summary:	An open-source implementation of the JSP Standard Tag Library
 Name:		jakarta-taglibs-standard
 Version:	1.1.2
-Release:	10
+Release:	11
 License:	ASL 2.0
 Group:		Development/Java
 Url:		http://jakarta.apache.org/taglibs/
-Source0:	http://archive.apache.org/dist/jakarta/taglibs/standard/source/jakarta-taglibs-standard-1.1.1-src.tar.gz
+Source0:	http://archive.apache.org/dist/jakarta/taglibs/standard/source/jakarta-taglibs-standard-%{version}-src.tar.gz
 Patch0:		jakarta-taglibs-standard-%{version}-build.patch
-Patch1:		jakarta-taglibs-standard-1.1.1-remove-enums.patch
+Patch1:		fix-1.6.0-build.patch
+Patch2:		jakarta-taglibs-standard-jdbc-4.1.patch
 %if !%{gcj_support}
 BuildArch:	noarch
 %else
 BuildRequires:	java-gcj-compat-devel
 Requires(post,postun):	java-gcj-compat
 %endif
-%endif
 BuildRequires:	ant
 BuildRequires:	java-1.6.0-openjdk-devel
 BuildRequires:	jpackage-utils >= 0:1.5.30
-BuildRequires:	servletapi5 >= 0:5.0.16
-BuildRequires:	tomcat5-jsp-2.0-api >= 0:5.0.16
+BuildRequires:	tomcat-servlet-3.0-api
+BuildRequires:	tomcat-jsp-2.2-api
 BuildRequires:	xalan-j2 >= 2.6.0
-Requires:	servletapi5 >= 0:5.0.16
-Requires:	tomcat5-jsp-2.0-api >= 0:5.0.16
+Requires:	servletapi5
+Requires:	tomcat-jsp-2.2-api
 Requires:	xalan-j2 >= 2.6.0
 
 %description
@@ -43,9 +43,10 @@ BuildRequires:	java-javadoc
 Javadoc for %{name}.
 
 %prep
-%setup  -qn %{name}-1.1.1-src
-%patch0 -p0 -b .orig
+%setup  -qn %{name}-1.1.2-src
+%patch0 -p0 -b .origA
 %patch1 -p0
+%patch2 -p1
 cat > build.properties <<EOBP
 build.dir=build
 dist.dir=dist
