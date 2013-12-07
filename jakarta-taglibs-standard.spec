@@ -5,7 +5,7 @@
 Summary:	An open-source implementation of the JSP Standard Tag Library
 Name:		jakarta-taglibs-standard
 Version:	1.1.2
-Release:	13
+Release:	14
 License:	ASL 2.0
 Group:		Development/Java
 Url:		http://jakarta.apache.org/taglibs/
