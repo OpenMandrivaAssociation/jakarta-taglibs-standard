@@ -33,4 +33,3 @@
    
      <!-- Copy web.xml + examples TLD -->
      <copy todir="${build.examples}/WEB-INF">
-
