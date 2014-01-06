@@ -80,7 +80,7 @@ Javadoc for %{name}.
 
 %prep
 %setup -q -n %{name}-%{version}-src
-%patch0 -b .orig
+%patch0
 %patch1
 %patch2
 #
