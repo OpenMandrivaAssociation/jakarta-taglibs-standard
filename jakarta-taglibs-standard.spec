@@ -38,7 +38,7 @@ Release:        11.0%{?dist}
 Epoch:          0
 Summary:        An open-source implementation of the JSP Standard Tag Library
 License:        ASL 2.0
-URL:            http://jakarta.apache.org/taglibs/
+URL:            https://jakarta.apache.org/taglibs/
 Source0:        http://archive.apache.org/dist/jakarta/taglibs/standard/source/jakarta-taglibs-standard-%{version}-src.tar.gz
 Source1:        http://repo1.maven.org/maven2/jstl/jstl/%{version}/jstl-%{version}.pom
 Source2:        http://repo1.maven.org/maven2/taglibs/standard/%{version}/standard-%{version}.pom
